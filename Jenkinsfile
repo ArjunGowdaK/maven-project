@@ -30,7 +30,13 @@ pipeline {
         stage('Package') {
             steps {
                 sh 'mvn package'
+                
             }
         }
+        stage('Checkout') {
+    steps {
+        git branch: 'main', url: 'https://github.com/ArjunGowdaK/maven-project.git'
+    }
+}
     }
 }
