@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Naveen04jan/ven.git',
+                    url: 'https://github.com/ArjunGowdaK/maven-project.git',
                     credentialsId: 'github-token'
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             emailext (
                 subject: "SUCCESS: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build succeeded!\nCheck: ${BUILD_URL}",
-                to: "naveenmys64@gmail.com"
+                to: "lachiarjun777@gmail.com"
             )
         }
 
